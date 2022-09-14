@@ -26,8 +26,8 @@ $(document).ready(function(){
  $('#load_data').click(function(){
    $.ajax({
 	url:'https://gainerbucket.s3.us-west-2.amazonaws.com/gainers.csv',
-	type: 'GET',
-	}).done(function(xml) {   
+	data: 'GET',
+	}).done(function(stock_data) {   
    {
     var stock_data = data.split(/\r?\n|\r/);
     var table_data = '<table class="table table-bordered table-striped">';
